@@ -17,6 +17,9 @@
 		C93779DC1EAE32880030A362 /* OpenVPNCredentials+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C93779D91EAE32880030A362 /* OpenVPNCredentials+Internal.h */; };
 		C94605E91EAA656B00971516 /* OpenVPNConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */; };
 		C94605EA1EAA65F200971516 /* OpenVPNConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */; };
+		C957174F1EC22D15006F38CC /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957174E1EC22D15006F38CC /* Keychain.swift */; };
+		C95717501EC22D15006F38CC /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957174E1EC22D15006F38CC /* Keychain.swift */; };
+		C95717531EC22DB7006F38CC /* KeychainAccess+Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */; };
 		C9657A171EB0A7F800EFF210 /* OpenVPNConnectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A151EB0A7F800EFF210 /* OpenVPNConnectionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9657A181EB0A7F800EFF210 /* OpenVPNConnectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A151EB0A7F800EFF210 /* OpenVPNConnectionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9657A1D1EB0A8D800EFF210 /* OpenVPNConnectionInfo+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A1B1EB0A8D800EFF210 /* OpenVPNConnectionInfo+Internal.h */; };
@@ -85,10 +88,10 @@
 		C9BCE25B1EB3C0D9009D6AC1 /* OpenVPNSessionToken.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9BCE2571EB3C0D9009D6AC1 /* OpenVPNSessionToken.mm */; };
 		C9BCE25E1EB3C201009D6AC1 /* OpenVPNSessionToken+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BCE25C1EB3C201009D6AC1 /* OpenVPNSessionToken+Internal.h */; };
 		C9BCE25F1EB3C201009D6AC1 /* OpenVPNSessionToken+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BCE25C1EB3C201009D6AC1 /* OpenVPNSessionToken+Internal.h */; };
-		C9BDB1351EBCC3B900C204FF /* TUNConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDB1331EBCC3B900C204FF /* TUNConfiguration.h */; };
-		C9BDB1361EBCC3B900C204FF /* TUNConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDB1331EBCC3B900C204FF /* TUNConfiguration.h */; };
-		C9BDB1371EBCC3B900C204FF /* TUNConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB1341EBCC3B900C204FF /* TUNConfiguration.m */; };
-		C9BDB1381EBCC3B900C204FF /* TUNConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB1341EBCC3B900C204FF /* TUNConfiguration.m */; };
+		C9BDB1351EBCC3B900C204FF /* OpenVPNTunnelSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDB1331EBCC3B900C204FF /* OpenVPNTunnelSettings.h */; };
+		C9BDB1361EBCC3B900C204FF /* OpenVPNTunnelSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDB1331EBCC3B900C204FF /* OpenVPNTunnelSettings.h */; };
+		C9BDB1371EBCC3B900C204FF /* OpenVPNTunnelSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB1341EBCC3B900C204FF /* OpenVPNTunnelSettings.m */; };
+		C9BDB1381EBCC3B900C204FF /* OpenVPNTunnelSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB1341EBCC3B900C204FF /* OpenVPNTunnelSettings.m */; };
 		C9BDB1401EBCCC4300C204FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB13F1EBCCC4300C204FF /* AppDelegate.swift */; };
 		C9BDB1421EBCCC4300C204FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB1411EBCCC4300C204FF /* ViewController.swift */; };
 		C9BDB1451EBCCC4300C204FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BDB1431EBCCC4300C204FF /* Main.storyboard */; };
@@ -97,10 +100,6 @@
 		C9BDB15C1EBCCCAA00C204FF /* OpenVPN iOS Tunnel Provider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C9BDB1531EBCCCAA00C204FF /* OpenVPN iOS Tunnel Provider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C9BDB16C1EBCCE9600C204FF /* OpenVPNAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB475C1E71663A00F3F98C /* OpenVPNAdapter.framework */; };
 		C9BDB1721EBCD0F200C204FF /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB1711EBCD0F200C204FF /* PacketTunnelProvider.swift */; };
-		C9BDB1351EBCC3B900C204FF /* OpenVPNTunnelSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDB1331EBCC3B900C204FF /* OpenVPNTunnelSettings.h */; };
-		C9BDB1361EBCC3B900C204FF /* OpenVPNTunnelSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDB1331EBCC3B900C204FF /* OpenVPNTunnelSettings.h */; };
-		C9BDB1371EBCC3B900C204FF /* OpenVPNTunnelSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB1341EBCC3B900C204FF /* OpenVPNTunnelSettings.m */; };
-		C9BDB1381EBCC3B900C204FF /* OpenVPNTunnelSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDB1341EBCC3B900C204FF /* OpenVPNTunnelSettings.m */; };
 		C9D2ABDB1EA20F99007EDF9D /* OpenVPNAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9BB477E1E7173C700F3F98C /* OpenVPNAdapter.mm */; };
 		C9D2ABDC1EA20F99007EDF9D /* OpenVPNClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9BB47781E7171ED00F3F98C /* OpenVPNClient.mm */; };
 		C9D2ABDE1EA20F99007EDF9D /* ovpncli.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9FD92191E9A667600374FC4 /* ovpncli.cpp */; };
@@ -180,6 +179,8 @@
 		C93779D41EAE32670030A362 /* OpenVPNCredentials.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenVPNCredentials.mm; sourceTree = "<group>"; };
 		C93779D91EAE32880030A362 /* OpenVPNCredentials+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenVPNCredentials+Internal.h"; sourceTree = "<group>"; };
 		C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenVPNConfigurationTests.swift; sourceTree = "<group>"; };
+		C957174E1EC22D15006F38CC /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Vendors/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
+		C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainAccess+Reference.swift"; sourceTree = "<group>"; };
 		C9657A151EB0A7F800EFF210 /* OpenVPNConnectionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenVPNConnectionInfo.h; sourceTree = "<group>"; };
 		C9657A161EB0A7F800EFF210 /* OpenVPNConnectionInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenVPNConnectionInfo.mm; sourceTree = "<group>"; };
 		C9657A1B1EB0A8D800EFF210 /* OpenVPNConnectionInfo+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenVPNConnectionInfo+Internal.h"; sourceTree = "<group>"; };
@@ -221,8 +222,8 @@
 		C9BCE2561EB3C0D9009D6AC1 /* OpenVPNSessionToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenVPNSessionToken.h; sourceTree = "<group>"; };
 		C9BCE2571EB3C0D9009D6AC1 /* OpenVPNSessionToken.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenVPNSessionToken.mm; sourceTree = "<group>"; };
 		C9BCE25C1EB3C201009D6AC1 /* OpenVPNSessionToken+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenVPNSessionToken+Internal.h"; sourceTree = "<group>"; };
-		C9BDB1331EBCC3B900C204FF /* TUNConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUNConfiguration.h; sourceTree = "<group>"; };
-		C9BDB1341EBCC3B900C204FF /* TUNConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUNConfiguration.m; sourceTree = "<group>"; };
+		C9BDB1331EBCC3B900C204FF /* OpenVPNTunnelSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenVPNTunnelSettings.h; sourceTree = "<group>"; };
+		C9BDB1341EBCC3B900C204FF /* OpenVPNTunnelSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenVPNTunnelSettings.m; sourceTree = "<group>"; };
 		C9BDB13D1EBCCC4300C204FF /* OpenVPN iOS Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenVPN iOS Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BDB13F1EBCCC4300C204FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9BDB1411EBCCC4300C204FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -235,8 +236,6 @@
 		C9BDB1611EBCCD5500C204FF /* OpenVPN iOS Client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OpenVPN iOS Client.entitlements"; sourceTree = "<group>"; };
 		C9BDB1621EBCCD7E00C204FF /* OpenVPN iOS Tunnel Provider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OpenVPN iOS Tunnel Provider.entitlements"; sourceTree = "<group>"; };
 		C9BDB1711EBCD0F200C204FF /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
-		C9BDB1331EBCC3B900C204FF /* OpenVPNTunnelSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenVPNTunnelSettings.h; sourceTree = "<group>"; };
-		C9BDB1341EBCC3B900C204FF /* OpenVPNTunnelSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenVPNTunnelSettings.m; sourceTree = "<group>"; };
 		C9D2ABF01EA20F99007EDF9D /* OpenVPNAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenVPNAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D2ABFF1EA212A3007EDF9D /* OpenVPN Adapter macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenVPN Adapter macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FD92181E9A667600374FC4 /* ovpncli.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ovpncli.hpp; path = Vendors/openvpn/client/ovpncli.hpp; sourceTree = "<group>"; };
@@ -399,6 +398,30 @@
 			name = "Enums and Constants";
 			sourceTree = "<group>";
 		};
+		C957174C1EC22CD3006F38CC /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				C957174D1EC22D01006F38CC /* KeychainAccess */,
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		C957174D1EC22D01006F38CC /* KeychainAccess */ = {
+			isa = PBXGroup;
+			children = (
+				C957174E1EC22D15006F38CC /* Keychain.swift */,
+			);
+			name = KeychainAccess;
+			sourceTree = "<group>";
+		};
+		C95717511EC22DA4006F38CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		C9B376B71EA53CE700B7F423 /* Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +565,7 @@
 		C9BDB1631EBCCDA000C204FF /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C95717511EC22DA4006F38CC /* Extensions */,
 				C9BDB1641EBCCDA900C204FF /* Configuration */,
 			);
 			name = Libraries;
@@ -560,6 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				C9BDB1661EBCCDBA00C204FF /* Configuration */,
+				C957174C1EC22CD3006F38CC /* Vendors */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1032,6 +1057,7 @@
 			files = (
 				C9BDB1421EBCCC4300C204FF /* ViewController.swift in Sources */,
 				C9BDB1401EBCCC4300C204FF /* AppDelegate.swift in Sources */,
+				C957174F1EC22D15006F38CC /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,6 +1066,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9BDB1721EBCD0F200C204FF /* PacketTunnelProvider.swift in Sources */,
+				C95717531EC22DB7006F38CC /* KeychainAccess+Reference.swift in Sources */,
+				C95717501EC22D15006F38CC /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1777,6 +1805,7 @@
 				C9BDB14D1EBCCC4300C204FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9BDB15D1EBCCCAA00C204FF /* Build configuration list for PBXNativeTarget "OpenVPN iOS Tunnel Provider" */ = {
 			isa = XCConfigurationList;
@@ -1785,6 +1814,7 @@
 				C9BDB15F1EBCCCAA00C204FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9D2ABED1EA20F99007EDF9D /* Build configuration list for PBXNativeTarget "OpenVPN Adapter macOS" */ = {
 			isa = XCConfigurationList;
