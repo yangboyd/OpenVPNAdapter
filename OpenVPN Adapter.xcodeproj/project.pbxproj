@@ -24,9 +24,9 @@
 		C95717571EC22EFE006F38CC /* OpenVPNConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */; };
 		C95717591EC232BA006F38CC /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717581EC232BA006F38CC /* Then.swift */; };
 		C957175D1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */; };
-		C957177E1EC33865006F38CC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957177D1EC33865006F38CC /* NetworkExtension.framework */; };
-		C957177F1EC33959006F38CC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957177D1EC33865006F38CC /* NetworkExtension.framework */; };
 		C95717811EC33980006F38CC /* OpenVPNAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB475C1E71663A00F3F98C /* OpenVPNAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C95717841EC36412006F38CC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C912BB241E7C3339002B9414 /* NetworkExtension.framework */; };
+		C95717851EC3641B006F38CC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C912BB241E7C3339002B9414 /* NetworkExtension.framework */; };
 		C9657A171EB0A7F800EFF210 /* OpenVPNConnectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A151EB0A7F800EFF210 /* OpenVPNConnectionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9657A181EB0A7F800EFF210 /* OpenVPNConnectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A151EB0A7F800EFF210 /* OpenVPNConnectionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9657A1D1EB0A8D800EFF210 /* OpenVPNConnectionInfo+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A1B1EB0A8D800EFF210 /* OpenVPNConnectionInfo+Internal.h */; };
@@ -202,7 +202,6 @@
 		C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenVPNConfigurationKey.swift; sourceTree = "<group>"; };
 		C95717581EC232BA006F38CC /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NEPacketTunnelFlow+OpenVPN.swift"; sourceTree = "<group>"; };
-		C957177D1EC33865006F38CC /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
 		C9657A151EB0A7F800EFF210 /* OpenVPNConnectionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenVPNConnectionInfo.h; sourceTree = "<group>"; };
 		C9657A161EB0A7F800EFF210 /* OpenVPNConnectionInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenVPNConnectionInfo.mm; sourceTree = "<group>"; };
 		C9657A1B1EB0A8D800EFF210 /* OpenVPNConnectionInfo+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenVPNConnectionInfo+Internal.h"; sourceTree = "<group>"; };
@@ -286,7 +285,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C957177E1EC33865006F38CC /* NetworkExtension.framework in Frameworks */,
+				C95717841EC36412006F38CC /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +293,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C957177F1EC33959006F38CC /* NetworkExtension.framework in Frameworks */,
+				C95717851EC3641B006F38CC /* NetworkExtension.framework in Frameworks */,
 				C9BDB16C1EBCCE9600C204FF /* OpenVPNAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,7 +361,6 @@
 		C91031361E472C870004DFFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C957177D1EC33865006F38CC /* NetworkExtension.framework */,
 				C912BB241E7C3339002B9414 /* NetworkExtension.framework */,
 				C90BAD301E73FF6C00DEFB32 /* SystemConfiguration.framework */,
 			);
