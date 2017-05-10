@@ -11,7 +11,7 @@ import OpenVPNAdapter
 
 class PacketTunnelProvider: NEPacketTunnelProvider {
     
-    let keychain = Keychain(service: "me.ss-abramchuk.openvpn-ios-client", accessGroup: "2TWXCGG7R3.me.ss-abramchuk.openvpn-ios-client.keychain-group")
+    let keychain = Keychain(service: Keychain.service, accessGroup: Keychain.group)
     
     lazy var vpnAdapter: OpenVPNAdapter = {
         return OpenVPNAdapter().then { $0.delegate = self }
@@ -42,7 +42,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             $0.fileContent = fileContent
         }
         
-        // Apply OpenVPN configuration.
+        // Apply OpenVPN configuration
         let properties: OpenVPNProperties
         do {
             properties = try vpnAdapter.apply(configuration: vpnConfiguration)
@@ -61,7 +61,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                 let reference = protocolConfiguration.passwordReference,
                 let password = (try? keychain.get(ref: reference))?.map({ $0 })
             else {
-                preconditionFailure("password should be provided to the tunnel provider")
+                preconditionFailure("password should be stored in the keychain and the reference should be provided to the tunnel provider")
             }
             
             let credentials = OpenVPNCredentials().then {
