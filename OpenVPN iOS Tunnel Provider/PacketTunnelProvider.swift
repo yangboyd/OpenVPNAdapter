@@ -51,6 +51,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             return
         }
         
+        // Provide credentials if needed
         if !properties.autologin {
             guard let username = protocolConfiguration.username else {
                 preconditionFailure("username should be provided to the tunnel provider")
@@ -76,6 +77,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             }
         }
         
+        // Establish connection and wait for .connected event
         startHandler = completionHandler
         vpnAdapter.connect()
     }
