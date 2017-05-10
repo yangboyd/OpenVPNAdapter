@@ -25,6 +25,8 @@
 		C95717591EC232BA006F38CC /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717581EC232BA006F38CC /* Then.swift */; };
 		C957175D1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */; };
 		C957177E1EC33865006F38CC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957177D1EC33865006F38CC /* NetworkExtension.framework */; };
+		C957177F1EC33959006F38CC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957177D1EC33865006F38CC /* NetworkExtension.framework */; };
+		C95717811EC33980006F38CC /* OpenVPNAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB475C1E71663A00F3F98C /* OpenVPNAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9657A171EB0A7F800EFF210 /* OpenVPNConnectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A151EB0A7F800EFF210 /* OpenVPNConnectionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9657A181EB0A7F800EFF210 /* OpenVPNConnectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A151EB0A7F800EFF210 /* OpenVPNConnectionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9657A1D1EB0A8D800EFF210 /* OpenVPNConnectionInfo+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C9657A1B1EB0A8D800EFF210 /* OpenVPNConnectionInfo+Internal.h */; };
@@ -157,6 +159,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C95717801EC3396E006F38CC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C95717811EC33980006F38CC /* OpenVPNAdapter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9BDB1601EBCCCAA00C204FF /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C957177F1EC33959006F38CC /* NetworkExtension.framework in Frameworks */,
 				C9BDB16C1EBCCE9600C204FF /* OpenVPNAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -811,6 +825,7 @@
 				C9BDB13A1EBCCC4300C204FF /* Frameworks */,
 				C9BDB13B1EBCCC4300C204FF /* Resources */,
 				C9BDB1601EBCCCAA00C204FF /* Embed App Extensions */,
+				C95717801EC3396E006F38CC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
