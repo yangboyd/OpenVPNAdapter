@@ -36,7 +36,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             preconditionFailure("fileContent should be provided to the tunnel provider")
         }
         
-        // Create presentation of the OpenVPN configuration. Other properties such as connection timeout or
+        // Create representation of the OpenVPN configuration. Other properties such as connection timeout or
         // private key password aslo may be provided there.
         let vpnConfiguration = OpenVPNConfiguration().then {
             $0.fileContent = fileContent
