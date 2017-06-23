@@ -567,7 +567,7 @@ static void socketCallback(CFSocketRef socket, CFSocketCallBackType type, CFData
             // Prepend data with network protocol. It should be done because OpenVPN on iOS uses uint32_t prefixes containing network protocol.
             NSNumber *protocol = protocols[idx];
             uint32_t prefix = CFSwapInt32HostToBig((uint32_t)[protocol unsignedIntegerValue]);
-            
+
             [packet appendBytes:&prefix length:sizeof(prefix)];
 #endif
             
@@ -593,20 +593,18 @@ static void socketCallback(CFSocketRef socket, CFSocketCallBackType type, CFData
         return;
     }
     
-    uint32_t version = UINT32_MAX;
-    [data getBytes:&version length:prefixSize];
-    version = CFSwapInt32BigToHost(version);
+    uint32_t protocol = PF_UNSPEC;
+    [data getBytes:&protocol length:prefixSize];
+    protocol = CFSwapInt32BigToHost(protocol);
     
-    uint8_t protocol = [self getProtocolFamily:version];
-    
-    NSData *packet = [data subdataWithRange:NSMakeRange(prefixSize, data.length - prefixSize)];
+    NSRange range = NSMakeRange(prefixSize, data.length - prefixSize);
+    NSData *packet = [data subdataWithRange:range];
 #else
     // Get network protocol from header
     uint8_t header = 0;
     [data getBytes:&header length:1];
     
     uint32_t version = openvpn::IPHeader::version(header);
-    
     uint8_t protocol = [self getProtocolFamily:version];
     
     NSData *packet = data;
