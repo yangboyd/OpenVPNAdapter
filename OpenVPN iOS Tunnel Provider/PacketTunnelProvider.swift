@@ -17,6 +17,8 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         return OpenVPNAdapter().then { $0.delegate = self }
     }()
     
+    let vpnReachability = OpenVPNReachability()
+    
     var startHandler: ((Error?) -> Void)?
     var stopHandler: (() -> Void)?
     
@@ -77,6 +79,13 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             }
         }
         
+        // Start checking reachability. In some cases after switching from cellular to WiFi the adapter still uses cellular data.
+        // Changing reachability forces reconnection so the adapter will use actual connection.
+        vpnReachability.startTracking { [weak self] status in
+            guard status != .notReachable else { return }
+            self?.vpnAdapter.reconnect(interval: 5)
+        }
+        
         // Establish connection and wait for .connected event
         startHandler = completionHandler
         vpnAdapter.connect()
@@ -84,6 +93,8 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     
     override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         stopHandler = completionHandler
+        
+        vpnReachability.stopTracking()
         vpnAdapter.disconnect()
     }
     
@@ -132,6 +143,8 @@ extension PacketTunnelProvider: OpenVPNAdapterDelegate {
         guard let fatal = (error as NSError).userInfo[OpenVPNAdapterErrorFatalKey] as? Bool, fatal == true else {
             return
         }
+        
+        vpnReachability.stopTracking()
         
         if let startHandler = startHandler {
             startHandler(error)
