@@ -34,6 +34,14 @@
 		C93779DC1EAE32880030A362 /* OpenVPNCredentials+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C93779D91EAE32880030A362 /* OpenVPNCredentials+Internal.h */; };
 		C93A4F621EE18009004DC561 /* OpenVPNError.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A4F611EE18009004DC561 /* OpenVPNError.m */; };
 		C93A4F631EE18009004DC561 /* OpenVPNError.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A4F611EE18009004DC561 /* OpenVPNError.m */; };
+		C93AEF6D1F6DB862005FCC6D /* KeychainAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF6A1F6DB5A6005FCC6D /* KeychainAttribute.swift */; };
+		C93AEF6E1F6DB862005FCC6D /* KeychainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF6B1F6DB5A6005FCC6D /* KeychainClass.swift */; };
+		C93AEF6F1F6DB862005FCC6D /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF691F6DB5A6005FCC6D /* KeychainError.swift */; };
+		C93AEF701F6DB862005FCC6D /* KeychainKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF6C1F6DB5A6005FCC6D /* KeychainKeeper.swift */; };
+		C93AEF711F6DB864005FCC6D /* KeychainAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF6A1F6DB5A6005FCC6D /* KeychainAttribute.swift */; };
+		C93AEF721F6DB864005FCC6D /* KeychainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF6B1F6DB5A6005FCC6D /* KeychainClass.swift */; };
+		C93AEF731F6DB864005FCC6D /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF691F6DB5A6005FCC6D /* KeychainError.swift */; };
+		C93AEF741F6DB864005FCC6D /* KeychainKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF6C1F6DB5A6005FCC6D /* KeychainKeeper.swift */; };
 		C94605E91EAA656B00971516 /* OpenVPNConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */; };
 		C94605EA1EAA65F200971516 /* OpenVPNConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */; };
 		C957174F1EC22D15006F38CC /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957174E1EC22D15006F38CC /* Keychain.swift */; };
@@ -250,6 +258,10 @@
 		C93AEF631F6DB30D005FCC6D /* user.crt */ = {isa = PBXFileReference; lastKnownFileType = text; path = user.crt; sourceTree = "<group>"; };
 		C93AEF641F6DB30D005FCC6D /* ca.crt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ca.crt; sourceTree = "<group>"; };
 		C93AEF651F6DB379005FCC6D /* configuration.ovpn */ = {isa = PBXFileReference; lastKnownFileType = text; path = configuration.ovpn; sourceTree = "<group>"; };
+		C93AEF691F6DB5A6005FCC6D /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		C93AEF6A1F6DB5A6005FCC6D /* KeychainAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAttribute.swift; sourceTree = "<group>"; };
+		C93AEF6B1F6DB5A6005FCC6D /* KeychainClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainClass.swift; sourceTree = "<group>"; };
+		C93AEF6C1F6DB5A6005FCC6D /* KeychainKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKeeper.swift; sourceTree = "<group>"; };
 		C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenVPNConfigurationTests.swift; sourceTree = "<group>"; };
 		C957174E1EC22D15006F38CC /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Vendors/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
 		C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainAccess+Reference.swift"; sourceTree = "<group>"; };
@@ -502,6 +514,25 @@
 			name = "VPN Credentials";
 			sourceTree = "<group>";
 		};
+		C93AEF671F6DB580005FCC6D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C93AEF681F6DB58C005FCC6D /* Keychain */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		C93AEF681F6DB58C005FCC6D /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				C93AEF6A1F6DB5A6005FCC6D /* KeychainAttribute.swift */,
+				C93AEF6B1F6DB5A6005FCC6D /* KeychainClass.swift */,
+				C93AEF691F6DB5A6005FCC6D /* KeychainError.swift */,
+				C93AEF6C1F6DB5A6005FCC6D /* KeychainKeeper.swift */,
+			);
+			name = Keychain;
+			sourceTree = "<group>";
+		};
 		C957174C1EC22CD3006F38CC /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +561,7 @@
 		C95717541EC22ED4006F38CC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C93AEF671F6DB580005FCC6D /* Utils */,
 				C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */,
 				C9FA503E1EC38B180006E2BA /* KeychainProperties.swift */,
 			);
@@ -1278,6 +1310,10 @@
 			files = (
 				C9BDB1421EBCCC4300C204FF /* ViewController.swift in Sources */,
 				C9BDB1401EBCCC4300C204FF /* AppDelegate.swift in Sources */,
+				C93AEF6D1F6DB862005FCC6D /* KeychainAttribute.swift in Sources */,
+				C93AEF701F6DB862005FCC6D /* KeychainKeeper.swift in Sources */,
+				C93AEF6E1F6DB862005FCC6D /* KeychainClass.swift in Sources */,
+				C93AEF6F1F6DB862005FCC6D /* KeychainError.swift in Sources */,
 				C95717561EC22EFE006F38CC /* OpenVPNConfigurationKey.swift in Sources */,
 				C9FA503F1EC38B180006E2BA /* KeychainProperties.swift in Sources */,
 				C957174F1EC22D15006F38CC /* Keychain.swift in Sources */,
@@ -1290,9 +1326,13 @@
 			files = (
 				C957175D1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift in Sources */,
 				C9BDB1721EBCD0F200C204FF /* PacketTunnelProvider.swift in Sources */,
+				C93AEF741F6DB864005FCC6D /* KeychainKeeper.swift in Sources */,
+				C93AEF711F6DB864005FCC6D /* KeychainAttribute.swift in Sources */,
 				C9FA50401EC38B1B0006E2BA /* KeychainProperties.swift in Sources */,
 				C95717531EC22DB7006F38CC /* KeychainAccess+Reference.swift in Sources */,
 				C95717571EC22EFE006F38CC /* OpenVPNConfigurationKey.swift in Sources */,
+				C93AEF731F6DB864005FCC6D /* KeychainError.swift in Sources */,
+				C93AEF721F6DB864005FCC6D /* KeychainClass.swift in Sources */,
 				C95717591EC232BA006F38CC /* Then.swift in Sources */,
 				C95717891EC36512006F38CC /* Keychain.swift in Sources */,
 			);
