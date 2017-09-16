@@ -34,7 +34,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         }
         
         //
-        guard let fileContent = providerConfiguration[OpenVPNConfigurationKey.fileContent] as? Data else {
+        guard let fileContent = providerConfiguration[ProviderConfigurationKey.fileContent] as? Data else {
             preconditionFailure("fileContent should be provided to the tunnel provider")
         }
         

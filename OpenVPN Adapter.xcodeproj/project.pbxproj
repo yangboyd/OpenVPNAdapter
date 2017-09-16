@@ -46,8 +46,8 @@
 		C94605EA1EAA65F200971516 /* OpenVPNConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */; };
 		C957174F1EC22D15006F38CC /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957174E1EC22D15006F38CC /* Keychain.swift */; };
 		C95717531EC22DB7006F38CC /* KeychainAccess+Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */; };
-		C95717561EC22EFE006F38CC /* OpenVPNConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */; };
-		C95717571EC22EFE006F38CC /* OpenVPNConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */; };
+		C95717561EC22EFE006F38CC /* ProviderConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717551EC22EFE006F38CC /* ProviderConfigurationKey.swift */; };
+		C95717571EC22EFE006F38CC /* ProviderConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717551EC22EFE006F38CC /* ProviderConfigurationKey.swift */; };
 		C95717591EC232BA006F38CC /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717581EC232BA006F38CC /* Then.swift */; };
 		C957175D1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */; };
 		C95717811EC33980006F38CC /* OpenVPNAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB475C1E71663A00F3F98C /* OpenVPNAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -265,7 +265,7 @@
 		C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenVPNConfigurationTests.swift; sourceTree = "<group>"; };
 		C957174E1EC22D15006F38CC /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Vendors/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
 		C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainAccess+Reference.swift"; sourceTree = "<group>"; };
-		C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenVPNConfigurationKey.swift; sourceTree = "<group>"; };
+		C95717551EC22EFE006F38CC /* ProviderConfigurationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderConfigurationKey.swift; sourceTree = "<group>"; };
 		C95717581EC232BA006F38CC /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NEPacketTunnelFlow+OpenVPN.swift"; sourceTree = "<group>"; };
 		C95717881EC36512006F38CC /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = "OpenVPN iOS Client/Vendors/KeychainAccess/Keychain.swift"; sourceTree = SOURCE_ROOT; };
@@ -536,7 +536,7 @@
 		C93AEF751F6DB8F2005FCC6D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */,
+				C95717551EC22EFE006F38CC /* ProviderConfigurationKey.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1322,7 +1322,7 @@
 				C93AEF701F6DB862005FCC6D /* KeychainKeeper.swift in Sources */,
 				C93AEF6E1F6DB862005FCC6D /* KeychainClass.swift in Sources */,
 				C93AEF6F1F6DB862005FCC6D /* KeychainError.swift in Sources */,
-				C95717561EC22EFE006F38CC /* OpenVPNConfigurationKey.swift in Sources */,
+				C95717561EC22EFE006F38CC /* ProviderConfigurationKey.swift in Sources */,
 				C9FA503F1EC38B180006E2BA /* KeychainProperties.swift in Sources */,
 				C957174F1EC22D15006F38CC /* Keychain.swift in Sources */,
 			);
@@ -1338,7 +1338,7 @@
 				C93AEF711F6DB864005FCC6D /* KeychainAttribute.swift in Sources */,
 				C9FA50401EC38B1B0006E2BA /* KeychainProperties.swift in Sources */,
 				C95717531EC22DB7006F38CC /* KeychainAccess+Reference.swift in Sources */,
-				C95717571EC22EFE006F38CC /* OpenVPNConfigurationKey.swift in Sources */,
+				C95717571EC22EFE006F38CC /* ProviderConfigurationKey.swift in Sources */,
 				C93AEF731F6DB864005FCC6D /* KeychainError.swift in Sources */,
 				C93AEF721F6DB864005FCC6D /* KeychainClass.swift in Sources */,
 				C95717591EC232BA006F38CC /* Then.swift in Sources */,
