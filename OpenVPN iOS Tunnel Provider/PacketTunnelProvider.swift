@@ -174,6 +174,7 @@ extension PacketTunnelProvider: OpenVPNAdapterDelegate {
 extension PacketTunnelProvider {
     
     func vpnCredentials(type: KeychainClass, ref: Data) -> String {
+        // FIXME: Convert DER data retrieved from keychain to PEM string
         guard
             let data = (try? keychain.find(item: type, with: ref))?.data,
             let result = String(data: data, encoding: .utf8)?.replacingOccurrences(of: "\n", with: "\\n")
