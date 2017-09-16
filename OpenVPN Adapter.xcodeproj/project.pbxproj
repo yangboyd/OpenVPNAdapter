@@ -46,7 +46,6 @@
 		C93AEF781F6DBC5A005FCC6D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93AEF761F6DBC5A005FCC6D /* Result.swift */; };
 		C94605E91EAA656B00971516 /* OpenVPNConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */; };
 		C94605EA1EAA65F200971516 /* OpenVPNConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */; };
-		C95717531EC22DB7006F38CC /* KeychainAccess+Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */; };
 		C95717561EC22EFE006F38CC /* ProviderConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717551EC22EFE006F38CC /* ProviderConfigurationKey.swift */; };
 		C95717571EC22EFE006F38CC /* ProviderConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717551EC22EFE006F38CC /* ProviderConfigurationKey.swift */; };
 		C95717591EC232BA006F38CC /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95717581EC232BA006F38CC /* Then.swift */; };
@@ -262,7 +261,6 @@
 		C93AEF6C1F6DB5A6005FCC6D /* KeychainKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKeeper.swift; sourceTree = "<group>"; };
 		C93AEF761F6DBC5A005FCC6D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C94605E81EAA656B00971516 /* OpenVPNConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenVPNConfigurationTests.swift; sourceTree = "<group>"; };
-		C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainAccess+Reference.swift"; sourceTree = "<group>"; };
 		C95717551EC22EFE006F38CC /* ProviderConfigurationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderConfigurationKey.swift; sourceTree = "<group>"; };
 		C95717581EC232BA006F38CC /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NEPacketTunnelFlow+OpenVPN.swift"; sourceTree = "<group>"; };
@@ -549,7 +547,6 @@
 			isa = PBXGroup;
 			children = (
 				C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */,
-				C95717521EC22DB7006F38CC /* KeychainAccess+Reference.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1313,7 +1310,6 @@
 				C9BDB1721EBCD0F200C204FF /* PacketTunnelProvider.swift in Sources */,
 				C93AEF741F6DB864005FCC6D /* KeychainKeeper.swift in Sources */,
 				C93AEF711F6DB864005FCC6D /* KeychainAttribute.swift in Sources */,
-				C95717531EC22DB7006F38CC /* KeychainAccess+Reference.swift in Sources */,
 				C95717571EC22EFE006F38CC /* ProviderConfigurationKey.swift in Sources */,
 				C93AEF781F6DBC5A005FCC6D /* Result.swift in Sources */,
 				C93AEF731F6DB864005FCC6D /* KeychainError.swift in Sources */,
