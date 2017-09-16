@@ -33,7 +33,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             preconditionFailure("providerConfiguration should be provided to the tunnel provider")
         }
         
-        // Retrive key and certificates from keychain
+        // Retrive vpn configuration, key and certificates from keychain
         guard
             let fileContent = providerConfiguration[ProviderConfigurationKey.fileContent] as? Data,
             let caRef = providerConfiguration[ProviderConfigurationKey.caRef] as? Data,
