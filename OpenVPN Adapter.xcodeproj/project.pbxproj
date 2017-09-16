@@ -491,6 +491,17 @@
 			name = "Types and Constants";
 			sourceTree = "<group>";
 		};
+		C93AEF661F6DB3EB005FCC6D /* VPN Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				C93AEF641F6DB30D005FCC6D /* ca.crt */,
+				C93AEF631F6DB30D005FCC6D /* user.crt */,
+				C93AEF621F6DB30D005FCC6D /* user.key */,
+				C93AEF651F6DB379005FCC6D /* configuration.ovpn */,
+			);
+			name = "VPN Credentials";
+			sourceTree = "<group>";
+		};
 		C957174C1EC22CD3006F38CC /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,12 +753,9 @@
 		C9BDB1661EBCCDBA00C204FF /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				C93AEF661F6DB3EB005FCC6D /* VPN Credentials */,
 				C9BDB1611EBCCD5500C204FF /* OpenVPN iOS Client.entitlements */,
 				C9BDB14B1EBCCC4300C204FF /* Info.plist */,
-				C93AEF641F6DB30D005FCC6D /* ca.crt */,
-				C93AEF631F6DB30D005FCC6D /* user.crt */,
-				C93AEF621F6DB30D005FCC6D /* user.key */,
-				C93AEF651F6DB379005FCC6D /* configuration.ovpn */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
