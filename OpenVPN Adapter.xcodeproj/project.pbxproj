@@ -533,6 +533,14 @@
 			name = Keychain;
 			sourceTree = "<group>";
 		};
+		C93AEF751F6DB8F2005FCC6D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		C957174C1EC22CD3006F38CC /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,8 +569,8 @@
 		C95717541EC22ED4006F38CC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C93AEF751F6DB8F2005FCC6D /* Helpers */,
 				C93AEF671F6DB580005FCC6D /* Utils */,
-				C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */,
 				C9FA503E1EC38B180006E2BA /* KeychainProperties.swift */,
 			);
 			name = Shared;
