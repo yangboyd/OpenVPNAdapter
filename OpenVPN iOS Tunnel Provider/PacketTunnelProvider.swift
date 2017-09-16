@@ -108,7 +108,7 @@ extension PacketTunnelProvider: OpenVPNAdapterDelegate {
         }
     }
     
-    func handle(event: OpenVPNEvent, message: String?) {
+    func handle(event: OpenVPNAdapterEvent, message: String?) {
         switch event {
         case .connected:
             if reasserting {
