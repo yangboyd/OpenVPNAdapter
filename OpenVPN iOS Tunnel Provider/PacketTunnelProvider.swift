@@ -11,7 +11,7 @@ import OpenVPNAdapter
 
 class PacketTunnelProvider: NEPacketTunnelProvider {
     
-    let keychain = Keychain(service: Keychain.service, accessGroup: Keychain.group)
+    let keychain = KeychainKeeper(accessGroup: nil)
     
     lazy var vpnAdapter: OpenVPNAdapter = {
         return OpenVPNAdapter().then { $0.delegate = self }
@@ -33,15 +33,29 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             preconditionFailure("providerConfiguration should be provided to the tunnel provider")
         }
         
-        //
-        guard let fileContent = providerConfiguration[ProviderConfigurationKey.fileContent] as? Data else {
-            preconditionFailure("fileContent should be provided to the tunnel provider")
+        // Retrive key and certificates from keychain
+        guard
+            let fileContent = providerConfiguration[ProviderConfigurationKey.fileContent] as? Data,
+            let caRef = providerConfiguration[ProviderConfigurationKey.caRef] as? Data,
+            let userCertificateRef = providerConfiguration[ProviderConfigurationKey.userCertificateRef] as? Data,
+            let userKeyRef = providerConfiguration[ProviderConfigurationKey.userKeyRef] as? Data
+        else {
+            preconditionFailure("fileContent, certificates and a key should be provided to the tunnel provider")
         }
+        
+        let ca = vpnCredentials(type: .certificate, ref: caRef)
+        let userCertificate = vpnCredentials(type: .certificate, ref: userCertificateRef)
+        let userKey = vpnCredentials(type: .key, ref: userKeyRef)
         
         // Create representation of the OpenVPN configuration. Other properties such as connection timeout or
         // private key password aslo may be provided there.
         let vpnConfiguration = OpenVPNConfiguration().then {
             $0.fileContent = fileContent
+            $0.settings = [
+                "ca" : ca,
+                "cert" : userCertificate,
+                "key" : userKey
+            ]
         }
         
         // Apply OpenVPN configuration
@@ -61,7 +75,8 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             
             guard
                 let reference = protocolConfiguration.passwordReference,
-                let password = (try? keychain.get(ref: reference))?.map({ $0 })
+                let data = (try? keychain.find(item: .password, with: reference))?.data,
+                let password = String(data: data, encoding: .utf8)
             else {
                 preconditionFailure("password should be stored in the keychain and the reference should be provided to the tunnel provider")
             }
@@ -152,6 +167,21 @@ extension PacketTunnelProvider: OpenVPNAdapterDelegate {
         } else {
             cancelTunnelWithError(error)
         }
+    }
+    
+}
+
+extension PacketTunnelProvider {
+    
+    func vpnCredentials(type: KeychainClass, ref: Data) -> String {
+        guard
+            let data = (try? keychain.find(item: type, with: ref))?.data,
+            let result = String(data: data, encoding: .utf8)?.replacingOccurrences(of: "\n", with: "\\n")
+        else {
+            preconditionFailure()
+        }
+        
+        return result
     }
     
 }
