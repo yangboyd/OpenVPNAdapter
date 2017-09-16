@@ -29,7 +29,7 @@ enum KeychainAttribute {
 extension KeychainAttribute: RawRepresentable {
 
     init?(rawValue: String) {
-        switch String(rawValue) {
+        switch rawValue {
         case String(kSecAttrAccessGroup): self = .accessGroup
         case String(kSecAttrLabel): self = .label
         case String(kSecAttrType): self = .type
