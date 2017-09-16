@@ -527,13 +527,13 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		C95717541EC22ED4006F38CC /* Common */ = {
+		C95717541EC22ED4006F38CC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				C95717551EC22EFE006F38CC /* OpenVPNConfigurationKey.swift */,
 				C9FA503E1EC38B180006E2BA /* KeychainProperties.swift */,
 			);
-			name = Common;
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		C957175A1EC23367006F38CC /* Helpers */ = {
@@ -703,7 +703,7 @@
 		C9BDB13E1EBCCC4300C204FF /* OpenVPN iOS Client */ = {
 			isa = PBXGroup;
 			children = (
-				C95717541EC22ED4006F38CC /* Common */,
+				C95717541EC22ED4006F38CC /* Shared */,
 				C9BDB1691EBCCDF600C204FF /* Controllers */,
 				C9BDB16A1EBCCE0800C204FF /* Storyboards */,
 				C9BDB1651EBCCDB300C204FF /* Libraries */,
