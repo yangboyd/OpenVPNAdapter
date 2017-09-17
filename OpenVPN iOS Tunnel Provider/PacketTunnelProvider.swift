@@ -44,9 +44,9 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         }
         
         guard
-            let ca = try? retrieveVPNCertificate(ref: caRef),
-            let userCertificate = try? retrieveVPNCertificate(ref: userCertificateRef),
-            let userKey = try? retrieveVPNKey(ref: userKeyRef, password: nil)
+            let ca = try? keychain.retrieveVPNCertificate(ref: caRef),
+            let userCertificate = try? keychain.retrieveVPNCertificate(ref: userCertificateRef),
+            let userKey = try? keychain.retrieveVPNKey(ref: userKeyRef, password: nil)
         else {
             fatalError("Failed to retrieve certificates and a user key from keychain")
         }
@@ -171,34 +171,6 @@ extension PacketTunnelProvider: OpenVPNAdapterDelegate {
         } else {
             cancelTunnelWithError(error)
         }
-    }
-    
-}
-
-extension PacketTunnelProvider {
-    
-    func retrieveVPNKey(ref: Data, password: String?) throws -> String {
-        let derData = (try keychain.find(item: .key, with: ref)).data
-        let privateKey = try OpenVPNPrivateKey(der: derData, password: password)
-
-        return try convertToPEM(converter: privateKey)
-    }
-    
-    func retrieveVPNCertificate(ref: Data) throws -> String {
-        let derData = (try keychain.find(item: .certificate, with: ref)).data
-        let certificate = try OpenVPNCertificate(der: derData)
-
-        return try convertToPEM(converter: certificate)
-    }
-    
-    func convertToPEM(converter: PEMConverter) throws -> String {
-        let pemData = try converter.pemData()
-        
-        guard let result = String(data: pemData, encoding: .utf8)?.replacingOccurrences(of: "\n", with: "\\n") else {
-            fatalError()
-        }
-        
-        return result
     }
     
 }
