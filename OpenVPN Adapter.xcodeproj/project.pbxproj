@@ -543,14 +543,6 @@
 			name = Vendors;
 			sourceTree = "<group>";
 		};
-		C95717511EC22DA4006F38CC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		C95717541EC22ED4006F38CC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,8 +555,8 @@
 		C957175A1EC23367006F38CC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C95717511EC22DA4006F38CC /* Extensions */,
-				C957175B1EC2336F006F38CC /* Utils */,
+				C957175C1EC23653006F38CC /* NEPacketTunnelFlow+OpenVPN.swift */,
+				C95717581EC232BA006F38CC /* Then.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -572,7 +564,6 @@
 		C957175B1EC2336F006F38CC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C95717581EC232BA006F38CC /* Then.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -742,6 +733,7 @@
 			children = (
 				C9BDB1641EBCCDA900C204FF /* Configuration */,
 				C957175A1EC23367006F38CC /* Helpers */,
+				C957175B1EC2336F006F38CC /* Utils */,
 				C95717861EC364C2006F38CC /* Vendors */,
 			);
 			name = Libraries;
