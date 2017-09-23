@@ -146,6 +146,8 @@ extension PacketTunnelProvider: OpenVPNAdapterDelegate {
                 return
             }
             
+            vpnReachability.stopTracking()
+            
             stopHandler()
             self.stopHandler = nil
             
