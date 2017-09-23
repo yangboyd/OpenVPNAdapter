@@ -44,9 +44,9 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         }
         
         guard
-            let ca = try? keychain.retrieveVPNCertificate(ref: caRef),
-            let userCertificate = try? keychain.retrieveVPNCertificate(ref: userCertificateRef),
-            let userKey = try? keychain.retrieveVPNKey(ref: userKeyRef, password: nil)
+            let ca = try? keychain.getCertificate(with: caRef),
+            let userCertificate = try? keychain.getCertificate(with: userCertificateRef),
+            let userKey = try? keychain.getPrivateKey(with: userKeyRef, password: nil)
         else {
             fatalError("Failed to retrieve certificates and a user key from keychain")
         }
@@ -79,8 +79,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             
             guard
                 let reference = protocolConfiguration.passwordReference,
-                let data = (try? keychain.find(item: .password, with: reference))?.data,
-                let password = String(data: data, encoding: .utf8)
+                let password = try? keychain.getPassword(with: reference)
             else {
                 preconditionFailure("password should be stored in the keychain and the reference should be provided to the tunnel provider")
             }

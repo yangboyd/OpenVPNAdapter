@@ -10,18 +10,28 @@ import OpenVPNAdapter
 
 extension KeychainKeeper {
     
-    func retrieveVPNKey(ref: Data, password: String?) throws -> String {
+    func getPrivateKey(with ref: Data, password: String?) throws -> String {
         let derData = (try self.find(item: .key, with: ref)).data
         let privateKey = try OpenVPNPrivateKey(der: derData, password: password)
         
         return try convertToPEM(converter: privateKey)
     }
     
-    func retrieveVPNCertificate(ref: Data) throws -> String {
+    func getCertificate(with ref: Data) throws -> String {
         let derData = (try self.find(item: .certificate, with: ref)).data
         let certificate = try OpenVPNCertificate(der: derData)
         
         return try convertToPEM(converter: certificate)
+    }
+    
+    func getPassword(with ref: Data) throws -> String {
+        let data = (try self.find(item: .password, with: ref)).data
+        
+        guard let result = String(data: data, encoding: .utf8) else {
+            fatalError()
+        }
+        
+        return result
     }
     
     private func convertToPEM(converter: PEMConverter) throws -> String {
